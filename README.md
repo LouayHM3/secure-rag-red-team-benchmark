@@ -1,6 +1,6 @@
 # Secure RAG Red-Team Benchmark
 
-A compact, repeatable evaluation harness for RAG assistants. It covers prompt injection, poisoned knowledge-base documents, sensitive-data leakage, and a benign grounded question, with explicit expected outcomes and a score.
+A complete, repeatable evaluation harness for RAG assistants. It covers prompt injection, poisoned knowledge-base documents, sensitive-data leakage, unsafe tool use, and benign grounded answers, with explicit expected actions, provenance, severity, and scores.
 
 ## Run
 
@@ -10,4 +10,4 @@ npm start
 curl http://localhost:3003/
 ```
 
-The benchmark is model-agnostic: pass real assistant outputs into `runBenchmark`. Extend the case schema with tool-use permissions, delegation chains, retrieval provenance, and workflow-level attack traces before integrating it into CI.
+The benchmark is model-agnostic: pass real assistant outputs into `runBenchmark`. `src/guardrails.js` models policy enforcement, `src/report.js` preserves retrieval provenance, and `.github/workflows/benchmark.yml` runs the suite in CI.
