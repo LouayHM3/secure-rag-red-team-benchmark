@@ -11,3 +11,7 @@ curl http://localhost:3003/
 ```
 
 The benchmark is model-agnostic: pass real assistant outputs into `runBenchmark`. `src/guardrails.js` models policy enforcement, `src/report.js` preserves retrieval provenance, and `integrations/` contains vector search, model gateway, and tool authorization contracts. `.github/workflows/benchmark.yml` runs the suite in CI.
+
+## Production boundary
+
+`.env.example`, `src/config.js`, `integrations/provider-client.js`, `docs/openapi.yaml`, `docs/production-deployment.md`, and `src/report-writer.js` define provider configuration, retries, report persistence, and deployment expectations without committing secrets or customer content.

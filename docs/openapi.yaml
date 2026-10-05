@@ -1,0 +1,11 @@
+openapi: 3.0.3
+info: { title: Secure RAG Red-Team Benchmark API, version: 1.0.0 }
+paths:
+  /health: { get: { responses: { '200': { description: Healthy } } } }
+  /: { get: { responses: { '200': { description: Benchmark score and evidence report } } } }
+components:
+  schemas:
+    EvaluationResult:
+      type: object
+      required: [id, category, result]
+      properties: { id: { type: string }, category: { type: string }, result: { type: object } }
