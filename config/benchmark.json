@@ -1,0 +1,1 @@
+{"model":"security-copilot-model","retrieval":{"topK":5,"minTrustedScore":1},"policies":{"allowExternalTools":false,"requireCitations":true,"blockSensitiveData":true},"categories":["prompt-injection","poisoned-document","data-leakage","unsafe-tool-use","benign-grounded"]}

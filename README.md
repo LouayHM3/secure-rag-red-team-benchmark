@@ -10,4 +10,4 @@ npm start
 curl http://localhost:3003/
 ```
 
-The benchmark is model-agnostic: pass real assistant outputs into `runBenchmark`. `src/guardrails.js` models policy enforcement, `src/report.js` preserves retrieval provenance, and `.github/workflows/benchmark.yml` runs the suite in CI.
+The benchmark is model-agnostic: pass real assistant outputs into `runBenchmark`. `src/guardrails.js` models policy enforcement, `src/report.js` preserves retrieval provenance, and `integrations/` contains vector search, model gateway, and tool authorization contracts. `.github/workflows/benchmark.yml` runs the suite in CI.
